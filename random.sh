@@ -21,3 +21,21 @@ value1=$((RANDOM%100))
 value2=$((RANDOM%100))
 average=$((($value + $value2)/2))
 echo $average
+
+
+#unit conversion 
+#1 feet = 12 inch 
+read -p "enter the unit by inches: " inches
+feet=$(($inches/12))
+echo  "unit in feet: " $feet
+length=60
+breath=40
+area=$(($length * $breath))
+areainmeter=$(echo $area | awk '{print $1*0.3048}')
+echo  "area of rectangle in meter is $areainmeter"
+total_plot=$(($area*25))
+areainacre=$(echo $total_plot | awk '{print $1*0.000022956841138659}')
+echo "area of 25 plot in acres is $areainacre"
+
+
+
